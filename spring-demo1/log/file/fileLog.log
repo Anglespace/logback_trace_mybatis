@@ -1,0 +1,131 @@
+2024-01-15 13:49:50,491 INFO (StartupInfoLogger.java:50)- Starting SpringDemo1Application using Java 17.0.9 with PID 16636 (E:\Adire\mycode\spring-demo1\spring-demo1\target\classes started by fendan in E:\Adire\mycode\spring-demo1\spring-demo1)
+2024-01-15 13:49:50,496 INFO (SpringApplication.java:668)- The following 1 profile is active: "dev"
+2024-01-15 13:49:50,590 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-15 13:49:50,590 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-15 13:49:52,556 INFO (TomcatWebServer.java:109)- Tomcat initialized with port 8888 (http)
+2024-01-15 13:49:52,589 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8888"]
+2024-01-15 13:49:52,592 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-01-15 13:49:52,592 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-15 13:49:52,681 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-01-15 13:49:52,683 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 2090 ms
+2024-01-15 13:49:53,290 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-01-15 13:49:53,313 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8888"]
+2024-01-15 13:49:53,349 INFO (TomcatWebServer.java:241)- Tomcat started on port 8888 (http) with context path ''
+2024-01-15 13:49:53,359 INFO (StartupInfoLogger.java:56)- Started SpringDemo1Application in 4.786 seconds (process running for 8.534)
+2024-01-15 13:50:05,680 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-15 13:50:05,682 INFO (FrameworkServlet.java:532)- Initializing Servlet 'dispatcherServlet'
+2024-01-15 13:50:05,684 INFO (FrameworkServlet.java:554)- Completed initialization in 1 ms
+2024-01-15 13:50:05,761 INFO (TestController.java:21)- Hello World!
+2024-01-15 15:29:27,362 INFO (StartupInfoLogger.java:50)- Starting SpringDemo1Application using Java 17.0.9 with PID 7460 (E:\Adire\mycode\spring-demo1\spring-demo1\target\classes started by fendan in E:\Adire\mycode\spring-demo1\spring-demo1)
+2024-01-15 15:29:27,385 INFO (SpringApplication.java:668)- The following 1 profile is active: "dev"
+2024-01-15 15:29:27,557 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-15 15:29:27,559 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-15 15:29:29,651 INFO (TomcatWebServer.java:109)- Tomcat initialized with port 8888 (http)
+2024-01-15 15:29:29,683 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-01-15 15:29:29,684 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-15 15:29:29,763 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-01-15 15:29:29,765 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 2200 ms
+2024-01-15 15:29:30,387 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-01-15 15:29:30,443 INFO (TomcatWebServer.java:241)- Tomcat started on port 8888 (http) with context path ''
+2024-01-15 15:29:30,453 INFO (StartupInfoLogger.java:56)- Started SpringDemo1Application in 4.743 seconds (process running for 7.804)
+2024-01-15 15:29:47,191 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-15 15:29:47,191 INFO (FrameworkServlet.java:532)- Initializing Servlet 'dispatcherServlet'
+2024-01-15 15:29:47,193 INFO (FrameworkServlet.java:554)- Completed initialization in 2 ms
+2024-01-15 15:29:47,243 INFO (TestController.java:21)- Hello World!
+2024-01-15 15:31:33,826 INFO (TestController.java:24)- Hello World!
+2024-01-15 15:31:33,832 INFO (TestController.java:25)- null
+2024-01-15 15:33:10,812 INFO (StartupInfoLogger.java:50)- Starting SpringDemo1Application using Java 17.0.9 with PID 8032 (E:\Adire\mycode\spring-demo1\spring-demo1\target\classes started by fendan in E:\Adire\mycode\spring-demo1\spring-demo1)
+2024-01-15 15:33:10,815 INFO (SpringApplication.java:668)- The following 1 profile is active: "dev"
+2024-01-15 15:33:10,904 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-15 15:33:10,904 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-15 15:33:12,553 INFO (TomcatWebServer.java:109)- Tomcat initialized with port 8888 (http)
+2024-01-15 15:33:12,588 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-01-15 15:33:12,589 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-15 15:33:12,679 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-01-15 15:33:12,681 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 1775 ms
+2024-01-15 15:33:13,241 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-01-15 15:33:13,297 INFO (TomcatWebServer.java:241)- Tomcat started on port 8888 (http) with context path ''
+2024-01-15 15:33:13,307 INFO (StartupInfoLogger.java:56)- Started SpringDemo1Application in 3.876 seconds (process running for 6.599)
+2024-01-15 15:34:39,145 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-15 15:34:39,146 INFO (FrameworkServlet.java:532)- Initializing Servlet 'dispatcherServlet'
+2024-01-15 15:34:39,147 INFO (FrameworkServlet.java:554)- Completed initialization in 1 ms
+2024-01-15 15:34:39,343 INFO (TestController.java:24)- Hello World!
+2024-01-15 15:34:39,353 INFO (TestController.java:25)- null
+2024-01-15 15:36:31,402 INFO (TestController.java:24)- Hello World!
+2024-01-15 15:36:31,402 INFO (TestController.java:25)- null
+2024-01-15 15:44:46,536 INFO (StartupInfoLogger.java:50)- Starting SpringDemo1Application using Java 17.0.9 with PID 1904 (E:\Adire\mycode\spring-demo1\spring-demo1\target\classes started by fendan in E:\Adire\mycode\spring-demo1\spring-demo1)
+2024-01-15 15:44:46,540 INFO (SpringApplication.java:668)- The following 1 profile is active: "dev"
+2024-01-15 15:44:46,649 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-15 15:44:46,649 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-15 15:44:48,493 INFO (TomcatWebServer.java:109)- Tomcat initialized with port 8888 (http)
+2024-01-15 15:44:48,530 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-01-15 15:44:48,531 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-15 15:44:48,701 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-01-15 15:44:48,703 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 2051 ms
+2024-01-15 15:44:49,568 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-01-15 15:44:49,653 INFO (TomcatWebServer.java:241)- Tomcat started on port 8888 (http) with context path ''
+2024-01-15 15:44:49,669 INFO (StartupInfoLogger.java:56)- Started SpringDemo1Application in 5.096 seconds (process running for 8.698)
+2024-01-15 15:44:55,001 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-15 15:44:55,001 INFO (FrameworkServlet.java:532)- Initializing Servlet 'dispatcherServlet'
+2024-01-15 15:44:55,002 INFO (FrameworkServlet.java:554)- Completed initialization in 1 ms
+2024-01-15 15:44:55,047 INFO (TestController.java:24)- Hello World!
+2024-01-15 15:44:55,050 INFO (TestController.java:25)- null
+2024-01-15 15:55:50,842 INFO (TestController.java:24)- Hello World!
+2024-01-15 15:55:50,843 INFO (TestController.java:25)- null
+2024-01-15 15:56:01,633 INFO (TestController.java:24)- Hello World!
+2024-01-15 15:56:01,634 INFO (TestController.java:25)- null
+2024-01-15 15:56:35,152 INFO (TestController.java:24)- Hello World!
+2024-01-15 15:56:35,153 INFO (TestController.java:25)- null
+2024-01-15 16:09:43,215 INFO (StartupInfoLogger.java:50)- Starting SpringDemo1Application using Java 17.0.9 with PID 13880 (E:\Adire\mycode\spring-demo1\spring-demo1\target\classes started by fendan in E:\Adire\mycode\spring-demo1\spring-demo1)
+2024-01-15 16:09:43,219 INFO (SpringApplication.java:668)- The following 1 profile is active: "dev"
+2024-01-15 16:09:43,321 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-15 16:09:43,322 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-15 16:09:45,256 INFO (TomcatWebServer.java:109)- Tomcat initialized with port 8888 (http)
+2024-01-15 16:09:45,290 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-01-15 16:09:45,290 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-15 16:09:45,385 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-01-15 16:09:45,387 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 2063 ms
+2024-01-15 16:09:45,948 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-01-15 16:09:46,004 INFO (TomcatWebServer.java:241)- Tomcat started on port 8888 (http) with context path ''
+2024-01-15 16:09:46,013 INFO (StartupInfoLogger.java:56)- Started SpringDemo1Application in 4.685 seconds (process running for 7.889)
+2024-01-15 16:09:49,998 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-15 16:09:49,999 INFO (FrameworkServlet.java:532)- Initializing Servlet 'dispatcherServlet'
+2024-01-15 16:09:50,000 INFO (FrameworkServlet.java:554)- Completed initialization in 1 ms
+2024-01-15 16:10:06,605 INFO (TestController.java:24)- Hello World!
+2024-01-15 16:10:06,608 INFO (TestController.java:25)- null
+2024-01-15 16:12:34,567 INFO (WebTraceFilter.java:32)- 插入traceId
+2024-01-15 16:12:37,626 INFO (TestController.java:24)- Hello World!
+2024-01-15 16:12:39,745 INFO (TestController.java:25)- traceId:null
+2024-01-15 16:13:31,380 INFO (WebTraceFilter.java:41)- 移除traceId
+2024-01-15 16:14:54,262 INFO (WebTraceFilter.java:32)- 插入traceId
+2024-01-15 16:14:54,281 INFO (TestController.java:24)- Hello World!
+2024-01-15 16:14:54,282 INFO (TestController.java:25)- 1746808160603201536
+2024-01-15 16:14:54,284 INFO (WebTraceFilter.java:41)- 移除traceId
+2024-01-15 16:15:20,397 INFO (WebTraceFilter.java:32)- 插入traceId
+2024-01-15 16:15:20,427 INFO (TestController.java:24)- Hello World!
+2024-01-15 16:15:20,428 INFO (TestController.java:25)- 1746808270263279616
+2024-01-15 16:15:20,433 INFO (WebTraceFilter.java:41)- 移除traceId
+2024-01-15 16:15:29,053 INFO (StartupInfoLogger.java:50)- Starting SpringDemo1Application using Java 17.0.9 with PID 15508 (E:\Adire\mycode\spring-demo1\spring-demo1\target\classes started by fendan in E:\Adire\mycode\spring-demo1\spring-demo1)
+2024-01-15 16:15:29,056 INFO (SpringApplication.java:668)- The following 1 profile is active: "dev"
+2024-01-15 16:15:29,154 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-15 16:15:29,155 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-15 16:15:30,829 INFO (TomcatWebServer.java:109)- Tomcat initialized with port 8888 (http)
+2024-01-15 16:15:30,863 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-01-15 16:15:30,863 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-15 16:15:30,947 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-01-15 16:15:30,949 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 1792 ms
+2024-01-15 16:15:31,509 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-01-15 16:15:31,566 INFO (TomcatWebServer.java:241)- Tomcat started on port 8888 (http) with context path ''
+2024-01-15 16:15:31,576 INFO (StartupInfoLogger.java:56)- Started SpringDemo1Application in 3.887 seconds (process running for 6.565)
+2024-01-15 17:44:40,258 INFO (StartupInfoLogger.java:50)- Starting SpringDemo1Application using Java 17.0.9 with PID 14648 (E:\Adire\mycode\spring-demo1\spring-demo1\target\classes started by fendan in E:\Adire\mycode\spring-demo1\spring-demo1)
+2024-01-15 17:44:40,261 INFO (SpringApplication.java:668)- The following 1 profile is active: "dev"
+2024-01-15 17:44:40,355 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-15 17:44:40,356 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-15 17:44:42,869 INFO (TomcatWebServer.java:109)- Tomcat initialized with port 8888 (http)
+2024-01-15 17:44:42,906 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-01-15 17:44:42,907 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-15 17:44:43,026 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-01-15 17:44:43,028 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 2668 ms
+2024-01-15 17:44:43,812 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-01-15 17:44:43,875 INFO (TomcatWebServer.java:241)- Tomcat started on port 8888 (http) with context path ''
+2024-01-15 17:44:43,887 INFO (StartupInfoLogger.java:56)- Started SpringDemo1Application in 5.28 seconds (process running for 8.721)
