@@ -3,6 +3,8 @@
 <mapper namespace="com.adire.springdemo1.mapper.SysUserMapper">
 
 <!--    SysUser getSysUserByUsername(String username);-->
-
-
+<select id="getSysUserByUsername" resultType="com.adire.springdemo1.bean.SysUser">
+    select * from sys_user
+    where username like CONCAT('%',#{username},'%')
+</select>
 </mapper>

@@ -4,3 +4,9 @@ server:
 spring:
   application:
     name: adire-demo1
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    com.adire: debug
+    org.springframework: warn

@@ -1,109 +1,88 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<configuration>
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
-    <!--本文主要输出日志为控制台日志，系统日志，sql日志，异常日志-->
-    <!-- %m输出的信息,%p日志级别,%t线程名,%d日期,%c类的全名,,,, -->
-    <!--控制台-->
-    <property name="CONSOLE_LOG_PATTERN" value="[%X{traceId}] [%-5p] [%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t@${PID}]  %c %M : %m%n"/>
+    <!--日志序列-->
+    <!--    <conversionRule conversionWord="sequence"-->
+    <!--                    converterClass="com.fd.element.logenvironment.LogbackSequenceConverter"/>-->
+    <conversionRule conversionWord="spanId" converterClass="com.adire.springdemo1.trace.LogBackSpanIdConverter"/>
+    <conversionRule conversionWord="traceId" converterClass="com.adire.springdemo1.trace.LogBackTraceIdConverter"/>
+    ​
+    <springProperty scope="context" name="springAppName" source="spring.application.name"/>
+    <!--    <springProperty scope="context" name="instanceId" source="eureka.instance.instance-id"/>-->
+
+    <!-- Example for logging into the build folder of your project -->
+    <!--    <property name="LOG_FILE" value="/var/log/fdserver/${instanceId}"/>​-->
+    <property name="LOG_FILE" value="log/adire/test"/>​
+
+    <!-- You can override this to have a custom pattern -->
+    <property name="CONSOLE_LOG_PATTERN"
+              value="%clr(%d{HH:mm:ss}){faint} %clr(%-5level) %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+
+    <property name="FILE_LOG_PATTERN"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %logger : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
 
 
+    <!-- Appender to log to console -->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>${CONSOLE_LOG_PATTERN}</pattern>
-            <charset>UTF-8</charset>
+            <charset>utf8</charset>
         </encoder>
     </appender>
 
-    <!--系统info级别日志-->
-    <!--<File> 日志目录，没有会自动创建-->
-    <!--<rollingPolicy>日志策略，每天简历一个日志文件，或者当天日志文件超过64MB时-->
-    <!--encoder 日志编码及输出格式-->
-    <appender name="fileLog"
-              class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>log/file/fileLog.log</File>
+    <!-- Appender to log to file -->​
+    <appender name="flatfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_FILE}.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>log/file/fileLog.log.%d.%i</fileNamePattern>
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <!-- or whenever the file size reaches 64 MB -->
-                <maxFileSize>64 MB</maxFileSize>
-            </timeBasedFileNamingAndTriggeringPolicy>
+            <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <maxHistory>7</maxHistory>
         </rollingPolicy>
         <encoder>
-            <pattern>
-                %d %p (%file:%line\)- %m%n
-            </pattern>
-            <charset>UTF-8</charset>
-            <!-- 此处设置字符集 -->
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+            <charset>utf8</charset>
         </encoder>
     </appender>
-
-    <!--sql日志-->
-    <appender name="sqlFile"
-              class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>log/sql/sqlFile.log</File>
+    ​
+    <!-- Appender to log to file in a JSON format -->
+    <appender name="logstash" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_FILE}.log.json</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>log/sql/sqlFile.log.%d.%i</fileNamePattern>
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <!-- or whenever the file size reaches 64 MB -->
-                <maxFileSize>64 MB</maxFileSize>
-            </timeBasedFileNamingAndTriggeringPolicy>
+            <fileNamePattern>${LOG_FILE}.json.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <maxHistory>7</maxHistory>
         </rollingPolicy>
-        <!--对记录事件进行格式化。负责两件事，一是把日志信息转换成字节数组，二是把字节数组写入到输出流。-->
-        <encoder>
-            <!--用来设置日志的输入格式-->
-            <pattern>
-                %d %p (%file:%line\)- %m%n
-            </pattern>
-            <charset>UTF-8</charset>
-            <!-- 此处设置字符集 -->
+        <!--  logstash插件，用于输入json格式的日志    -->
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <timestamp>
+                    <timeZone>UTC</timeZone>
+                </timestamp>
+                <pattern>
+                    <pattern>
+                        {
+                        "severity": "%level",
+                        "service": "${springAppName:-}",
+                        "trace": "%traceId",
+                        "span": "%spanId",
+                        "pid": "${PID:-}",
+                        "thread": "%thread",
+                        "class": "%logger",
+                        "rest": "%message",
+                        "exception": "${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
+                        }
+                    </pattern>
+                </pattern>
+            </providers>
         </encoder>
     </appender>
-
-
-    <!--异常日志-->
-    <appender name="errorFile"
-              class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>log/error/errorFile.log</File>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>log/error/errorFile.%d.log.%i</fileNamePattern>
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <!-- or whenever the file size reaches 64 MB -->
-                <maxFileSize>64 MB</maxFileSize>
-            </timeBasedFileNamingAndTriggeringPolicy>
-        </rollingPolicy>
-        <!--对记录事件进行格式化。负责两件事，一是把日志信息转换成字节数组，二是把字节数组写入到输出流。-->
-        <encoder>
-            <!--用来设置日志的输入格式-->
-            <pattern>
-                %d %p (%file:%line\)- %m%n
-            </pattern>
-            <charset>UTF-8</charset>
-            <!-- 此处设置字符集 -->
-        </encoder>
-        <!--
-            日志都在这里 过滤出 error
-            使用 try {}catch (Exception e){} 的话异常无法写入日志，可以在catch里用logger.error()方法手动写入日志
-            -->
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>ERROR</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-    </appender>
-    <!--  日志输出级别 -->
-    <!--All\DEBUG\INFO\WARN\ERROR\FATAL\OFF-->
-    <!--打印info级别日志，分别在控制台，fileLog，errorFile输出
-        异常日志在上面由过滤器过滤出ERROR日志打印
-    -->
+    ​
     <root level="INFO">
-        <appender-ref ref="fileLog" />
-        <appender-ref ref="console" />
-        <appender-ref ref="errorFile" />
+        <appender-ref ref="console"/>
+        <!-- uncomment this to have also JSON logs -->
+        <appender-ref ref="logstash"/>
+        <appender-ref ref="flatfile"/>
     </root>
 
-    <!--打印sql至sqlFile文件日志-->
-    <logger name="com.springboot.demo.mapper" level="DEBUG" additivity="false">
-        <appender-ref ref="console" />
-        <appender-ref ref="sqlFile" />
+    <logger name="springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator">
+        <level value="WARN"/>
     </logger>
 </configuration>
